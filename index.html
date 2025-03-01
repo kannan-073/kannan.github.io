@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday, [Her Name]! 💖</title>
+    <style>
+        body {
+            background: #ff99cc;
+            font-family: 'Arial', cursive;
+            text-align: center;
+        }
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: gold;
+            border-radius: 50%;
+            animation: explode 2s infinite;
+        }
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(5); opacity: 0; }
+        }
+        #secret-button {
+            cursor: pointer;
+            padding: 20px;
+            background: pink;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday, [Her Name]! 🎂</h1>
+    <div class="firework"></div>
+    <div class="firework" style="left: 50%;"></div>
+
+    <!-- Secret Love Note -->
+    <button id="secret-button" onclick="showMessage()">Click for a Surprise! 💌</button>
+    <p id="hidden-message" style="display: none;">You’re the best thing that ever happened to me. I love you! 💖</p>
+
+    <!-- Photo Gallery -->
+    <div>
+        <img src="your-photo1.jpg" width="200">
+        <img src="your-photo2.jpg" width="200">
+    </div>
+
+    <!-- Embedded Video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/[YOUR_VIDEO_ID]" frameborder="0" allow="autoplay"></iframe>
+
+    <script>
+        function showMessage() {
+            document.getElementById("hidden-message").style.display = "block";
+            document.body.style.background = "#ff66b3";
+            alert("🎵 You’re my sunshine! 🌞");
+        }
+        // Add fireworks animation
+        setInterval(() => {
+            const firework = document.createElement("div");
+            firework.className = "firework";
+            firework.style.left = Math.random() * 100 + "%";
+            firework.style.top = Math.random() * 100 + "%";
+            document.body.appendChild(firework);
+            setTimeout(() => firework.remove(), 2000);
+        }, 500);
+    </script>
+</body>
+</html>
